@@ -5,7 +5,7 @@ let color = {
 };
 
 const router = (app) => {
-  //implememt color picker her
+  //implememt color picker here
   app.get("/", (request, response) => {
     response.send({
       message: "Node.js and Express REST API",
