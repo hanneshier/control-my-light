@@ -1,3 +1,5 @@
+const path = require("path");
+
 let color = {
   r: 1,
   g: 2,
@@ -7,9 +9,12 @@ let color = {
 const router = (app) => {
   //implememt color picker here
   app.get("/", (request, response) => {
-    response.send({
-      message: "Node.js and Express REST API",
-    });
+    response.sendFile(path.join(__dirname + "/../www/index.html"));
+  });
+  //serve files inside www folder
+  app.get("/:file", (request, response) => {
+    const file = request.params.file;
+    response.sendFile(path.join(__dirname + "/../www/" + file));
   });
 
   // respond with rgb value

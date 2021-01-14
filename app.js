@@ -1,9 +1,10 @@
 // Require packages and set the port
 const express = require("express");
-const port = 3002;
 const bodyParser = require("body-parser");
-const app = express();
+const path = require("path");
 const routes = require("./routes/routes");
+const port = 3002;
+const app = express();
 
 // Use Node.js body parsing middleware
 app.use(bodyParser.json());
