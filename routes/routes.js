@@ -22,15 +22,9 @@ const router = (app) => {
     let req = request.body;
     console.log(req);
 
-    color.r = Number.isInteger(parseInt(req.r))
-      ? parseInt(req.r) % 256
-      : color.r;
-    color.g = Number.isInteger(parseInt(req.g))
-      ? parseInt(req.g) % 256
-      : color.g;
-    color.b = Number.isInteger(parseInt(req.b))
-      ? parseInt(req.b) % 256
-      : color.b;
+    color.r = parseInt(req.r) ? parseInt(req.r) % 256 : color.r;
+    color.g = parseInt(req.g) ? parseInt(req.g) % 256 : color.g;
+    color.b = parseInt(req.b) ? parseInt(req.b) % 256 : color.b;
 
     response.send("Updated the color");
   });
