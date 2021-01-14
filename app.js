@@ -2,8 +2,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+
 const routes = require("./routes/routes");
-const port = 3002;
+
+const port = 80;
 const app = express();
 
 // Use Node.js body parsing middleware
