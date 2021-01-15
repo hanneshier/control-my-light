@@ -1,42 +1,48 @@
+html,
 body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+
   color: #555;
   background: #eee;
-  font-size: 16;
-  line-height: 1.5;
-  margin: 0 auto;
-  max-width: 50em;
+  max-width: 40em;
   font-family: "Futura", "Century Gothic", "Helvetica", "Arial", sans-serif;
   text-align: left;
-  padding: 16px;
-  padding-top: 0em;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
+#header {
+  padding: 10px;
+}
+#body {
+  padding: 10px;
+  padding-bottom: 60px; /* Height of the footer */
+}
+#footer {
+  position: absolute;
+  padding: 5px;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Height of the footer */
 }
 
 .picker {
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 h1 {
+  margin: 0px;
   color: #333;
-  line-height: 1.2;
-  padding: 0em;
-  margin-top: 0em;
-  padding-top: 1em;
 }
 
 h2 {
+  margin: 0px;
   color: orange;
-}
-
-h1,
-h2 {
-  line-height: 1.2;
-}
-
-p {
-  line-height: 1.5;
-  padding: 0em 0em;
 }
 a {
   color: green;

@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
 
-<script src="iro.min.js"></script>
-
 <head>
 	<title>study!</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="utf-8">
 </head>
 
-<header>
-	<h1>
-		You should study right now!
-	</h1>
-</header>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
 
 <body>
-	<h2>
-		But since you are here anyways...
-	</h2>
-	<p>Just play around and see what happens</p>
-	<div class="picker" id="picker"></div>
+	<div id="container">
+		<div id="header">
+			<h1>You should study right now!</h1>
+		</div>
+
+		<div id="body">
+			<h2>But since you are here anyways...</h2>
+			<div class="picker" id="picker"></div>
+			<p>Just play around and see what happens!</p>
+			<a href="https://seebruecke.org/kampagnen/leavenoonebehind/aktionsideen/">#LeaveNoOneBehind</a>
+		</div>
+
+		<div id="footer">
+			<hr>
+			<p>You can follow me on
+				<a href="https://twitter.com/hanneshier">Twitter</a>
+				or check this project out on
+				<a href="https://github.com/hanneshier/control-my-light">Github</a>
+			</p>
+		</div>
+	</div>
 </body>
+
+<script src="iro.min.js"></script>
 <script src="picker.js"></script>
 
 </html>
