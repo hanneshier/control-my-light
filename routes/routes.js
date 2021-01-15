@@ -17,11 +17,10 @@ const router = (app) => {
   app.put("/color", (request, response) => {
     let req = request.body;
     console.log(req);
-
-    color.r = parseInt(req.r) ? parseInt(req.r) % 256 : color.r;
-    color.g = parseInt(req.g) ? parseInt(req.g) % 256 : color.g;
-    color.b = parseInt(req.b) ? parseInt(req.b) % 256 : color.b;
-    color.a = parseInt(req.a) ? (parseInt(req.a) * 256) % 256 : color.a;
+    color.r = Number.isInteger(req.r) ? parseInt(req.r) % 256 : color.r;
+    color.g = Number.isInteger(req.g) ? parseInt(req.g) % 256 : color.g;
+    color.b = Number.isInteger(req.b) ? parseInt(req.b) % 256 : color.b;
+    color.a = !isNaN(req.a) ? parseInt(parseFloat(req.a) * 255) % 256 : color.a;
 
     response.send("Updated color");
   });
