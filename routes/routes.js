@@ -1,9 +1,10 @@
 const path = require("path");
 
 let color = {
-  r: 1,
-  g: 2,
-  b: 3,
+  r: 255,
+  g: 255,
+  b: 255,
+  a: 255,
 };
 
 const router = (app) => {
@@ -20,6 +21,7 @@ const router = (app) => {
     color.r = parseInt(req.r) ? parseInt(req.r) % 256 : color.r;
     color.g = parseInt(req.g) ? parseInt(req.g) % 256 : color.g;
     color.b = parseInt(req.b) ? parseInt(req.b) % 256 : color.b;
+    color.a = parseInt(req.a) ? (parseInt(req.a) * 256) % 256 : color.a;
 
     response.send("Updated color");
   });
