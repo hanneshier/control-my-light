@@ -1,15 +1,15 @@
-version: '3.3'
+version: "3.3"
 services:
   changemylight:
     image: hannes/node-web-app
     ports:
-      - '49160:8080'
+      - "49160:8080"
     expose:
       - 80
     environment:
-        VIRTUAL_HOST: youshouldstudyrightnow.hieronimi.xyz, test.hieronimi.xyz
-        LETSENCRYPT_HOST: youshouldstudyrightnow.hieronimi.xyz, test.hieronimi.xyz
-        LETSENCRYPT_EMAIL: letsencrypt-youshouldstudyrightnow@hieronimi.xyz
+      VIRTUAL_HOST: youshouldstudyrightnow.hieronimi.xyz, test.hieronimi.xyz
+      LETSENCRYPT_HOST: youshouldstudyrightnow.hieronimi.xyz, test.hieronimi.xyz
+      LETSENCRYPT_EMAIL: letsencrypt-youshouldstudyrightnow@hieronimi.xyz
 
 networks:
   default:

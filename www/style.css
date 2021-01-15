@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100%;
 
-  color: #555;
+  color: rgb(19, 19, 19);
   background: #eee;
   max-width: 40em;
   font-family: "Futura", "Century Gothic", "Helvetica", "Arial", sans-serif;
