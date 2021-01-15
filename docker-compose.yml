@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   changemylight:
-    image: hannes/node-web-app
+    build: .
     ports:
       - "49160:8080"
     expose:
