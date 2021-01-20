@@ -7,8 +7,8 @@ services:
     expose:
       - 80
     environment:
-      VIRTUAL_HOST: youshouldstudyrightnow.hieronimi.xyz, test.hieronimi.xyz
-      LETSENCRYPT_HOST: youshouldstudyrightnow.hieronimi.xyz, test.hieronimi.xyz
+      VIRTUAL_HOST: youshouldstudyrightnow.hieronimi.xyz
+      LETSENCRYPT_HOST: youshouldstudyrightnow.hieronimi.xyz
       LETSENCRYPT_EMAIL: letsencrypt-youshouldstudyrightnow@hieronimi.xyz
 
 networks:
