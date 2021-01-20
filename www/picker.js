@@ -1,3 +1,5 @@
+// init iro color picker
+// for documentation and options see https://iro.js.org/guide.html
 var colorPicker = new iro.ColorPicker("#picker", {
   layout: [
     {
@@ -12,13 +14,12 @@ var colorPicker = new iro.ColorPicker("#picker", {
   ],
 });
 
+// put new rgba value to server component
 colorPicker.on("input:end", function (color) {
-  // log the current color as a HEX string
-  console.log(color.rgba);
   const data = color.rgba;
 
   fetch("/color", {
-    method: "PUT", // or 'PUT'
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
