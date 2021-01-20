@@ -27,12 +27,12 @@ const router = (app) => {
 
   //implememt color picker here
   app.get("/", (request, response) => {
-    response.sendFile(path.join(__dirname + "/../www/index.html"));
+    response.sendFile(path.join(__dirname + "/www/index.html"));
   });
   //serve files inside www folder
   app.get("/:file", (request, response) => {
     const file = request.params.file;
-    response.sendFile(path.join(__dirname + "/../www/" + file));
+    response.sendFile(path.join(__dirname + "/www/" + file));
   });
 };
 
